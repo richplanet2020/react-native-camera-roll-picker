@@ -68,9 +68,7 @@ class CameraRollPicker extends Component {
     this.renderRow = this.renderRow.bind(this);
     this.selectImage = this.selectImage.bind(this);
     this.renderImage = this.renderImage.bind(this);
-  }
-
-  componentWillMount() {
+    
     this.fetch();
   }
 
