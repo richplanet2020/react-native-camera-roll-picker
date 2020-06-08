@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
 });
 
 class ImageItem extends Component {
-  componentWillMount() {
+  constructor(props) {
+    super(props);
+
     let { width } = Dimensions.get('window');
     const { imageMargin, imagesPerRow, containerWidth } = this.props;
 
