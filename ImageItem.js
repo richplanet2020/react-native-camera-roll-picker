@@ -49,6 +49,7 @@ class ImageItem extends Component {
 
     return (
       <TouchableOpacity
+        activeOpacity={1}                              
         style={{ marginBottom: imageMargin, marginRight: imageMargin }}
         onPress={() => this.handleClick(image)}
       >
