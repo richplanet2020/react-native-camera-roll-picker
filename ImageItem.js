@@ -37,8 +37,10 @@ class ImageItem extends Component {
 
   render() {
     const {
-      item, selected, selectedMarker, imageMargin,
+      item, selected, selectedMarker, imageMargin, imageBorderColor
     } = this.props;
+
+    const imageBorder = imageBorderColor ? {borderStyle: 'solid', borderWidth: 1, borderColor: imageBorderColor} : undefined;
 
     const marker = selectedMarker || (<Image
       style={[styles.marker, { width: 25, height: 25 }]}
@@ -50,7 +52,7 @@ class ImageItem extends Component {
     return (
       <TouchableOpacity
         activeOpacity={1}                              
-        style={{ marginBottom: imageMargin, marginRight: imageMargin }}
+        style={{ ...imageBorder, marginBottom: imageMargin, marginRight: imageMargin }}
         onPress={() => this.handleClick({...image, type})}
       >
         <Image
