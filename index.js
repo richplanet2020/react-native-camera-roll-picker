@@ -170,6 +170,7 @@ class CameraRollPicker extends Component {
       selectedMarker,
       imagesPerRow,
       containerWidth,
+      imageBorderColor,
     } = this.props;
 
     const { uri } = item.node.image;
@@ -184,6 +185,7 @@ class CameraRollPicker extends Component {
         selectedMarker={selectedMarker}
         imagesPerRow={imagesPerRow}
         containerWidth={containerWidth}
+        imageBorderColor={imageBorderColor}
         onClick={this.selectImage}
       />
     );
@@ -203,6 +205,7 @@ class CameraRollPicker extends Component {
       containerWidth={this.props.containerWidth}
       imageMargin={this.props.imageMargin}
       selectedMarker={this.props.selectedMarker}
+      imageBorderColor={this.props.imageBorderColor}
     />);
   }
 
