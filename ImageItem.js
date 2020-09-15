@@ -23,12 +23,14 @@ class ImageItem extends Component {
     super(props);
 
     let { width } = Dimensions.get('window');
-    const { imageMargin, imagesPerRow, containerWidth } = this.props;
+    const { imageMargin, imagesPerRow, containerWidth, imageBorderColor } = this.props;
 
     if (typeof containerWidth !== 'undefined') {
       width = containerWidth;
     }
-    this.imageSize = (width - (imagesPerRow + 1) * imageMargin) / imagesPerRow;
+    
+    const borderMargin = imageBorderColor ? 2 : 0;  // 마진이 있는 경우 (좌우 1px씩 추가)
+    this.imageSize = (width - (imagesPerRow + 1) * (imageMargin + borderMargin)) / imagesPerRow;
   }
 
   handleClick(item) {
