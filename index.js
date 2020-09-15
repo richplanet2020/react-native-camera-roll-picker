@@ -237,7 +237,8 @@ class CameraRollPicker extends Component {
 
     const flatListOrEmptyText = this.state.data.length > 0 ? (
       <FlatList
-        style={{ ...flatListStyle, flex: 1 }}
+        style={{ flex: 1 }}
+        contentContainerStyle={{...flatListStyle}}
         ListFooterComponent={this.renderFooterSpinner}
         initialNumToRender={initialNumToRender}
         onEndReached={this.onEndReached}
